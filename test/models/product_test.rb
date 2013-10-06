@@ -4,14 +4,16 @@ class ProductTest < ActiveSupport::TestCase
 	fixtures :products
   
   def new_product(image_url)
-  	Product.new(:title        => "My Book Title",
+  	Product.new(
+           :title       => "My Book Title",
   				 :description => "test description",
   				 :price       => 1,
   				 :image_url   => image_url)
   end
 
   test "product is not valid without a unique title - i18n" do
-  	product = Product.new(:title       => products(:ruby).title,
+  	product = Product.new(
+                :title       => products(:ruby).title,
   						  :description => "test description",
   						  :price   	   => 1,
   						  :image_url   => "fred.gif")

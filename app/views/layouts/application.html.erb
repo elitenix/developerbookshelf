@@ -6,9 +6,27 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<div class="container">
-	<%= yield %>
-</div>
+<body>	
+	<div class="container">
+		<div id="banner">
+			<%= image_tag("logo.png") %>
+			<%= @page_title || "" %>
+			<span class="pull-right">Last Updated: <span class="last-updated"><%= Time.now.asctime %></span></span>
+		</div>	
+		<hr/>
+		<div class="row">
+			<div class="col-md-3">
+				<ul id="menu" class="nav nav-pills nav-stacked">
+  					<li class="active"><a href="#">Home</a></li>
+  					<li><a href="#">Questions</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div id="main" class="col-md-9">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

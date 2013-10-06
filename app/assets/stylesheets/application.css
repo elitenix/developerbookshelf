@@ -16,7 +16,18 @@
 .container {
 	width: 960px;
 	margin: 0 auto;
+	padding-top: 15px;
 }
 .btn-primary, .btn-success, .btn-danger, .btn-warning {
 	color: #ffffff !important;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	color: #ffffff;
+	background-color: #c83737;
+}
+.nav-pills > li a:hover, .nav-pills > li:hover {
+	color: #000000;
+}
+.last-updated {
+	font-weight: bold;
 }
