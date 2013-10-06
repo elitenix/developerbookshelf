@@ -17,3 +17,6 @@
 	width: 960px;
 	margin: 0 auto;
 }
+.btn-primary, .btn-success, .btn-danger, .btn-warning {
+	color: #ffffff !important;
+}
