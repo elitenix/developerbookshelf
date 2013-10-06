@@ -1,0 +1,20 @@
+<% if notice %>
+<p id="notice" class="alert"><%= notice %></p>
+<% end %>
+
+<% @products.each do |product| %>
+<div class="row">
+	<div class="col-md-3">
+		<%= image_tag(product.image_url, :class => 'product-img') %>
+	</div>
+	<div class="col-md-8">
+		<h3><%= product.title %></h3>
+		<%= sanitize product.description %>
+		<div class="price_line">
+			<span class="price"><%= number_to_currency(product.price) %></span>
+			<button class="btn btn-sm btn-primary pull-right">Add to Cart</button>
+		</div>		
+	</div>	
+</div>
+<hr/>
+<% end %>
