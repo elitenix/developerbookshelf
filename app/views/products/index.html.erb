@@ -21,7 +21,7 @@
         <%= link_to 'Destroy', product, :data => {:confirm => "Are you sure?", :method => :delete} %>
       </td>
       <td class="list_price">
-        $<%= product.price %>
+        <%= number_to_currency product.price %>
       </td>
     </tr>
     <% end %>
