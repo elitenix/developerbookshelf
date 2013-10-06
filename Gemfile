@@ -24,6 +24,7 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
+gem "prawn"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -35,7 +36,7 @@ end
 
 group :global do
 	# TinyMCE is a custom html editor
-	gem 'tinymce-rails'
+	gem 'tinymce-rails'	
 end
 
 
